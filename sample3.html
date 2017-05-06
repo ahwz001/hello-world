@@ -1,0 +1,13 @@
+sample3 = """<html>
+  <body>
+    <ul>
+      <li id="begin"><a href="https://scrapy.org">Scrapy</a>begin</li>
+      <li><a href="https://scrapinghub.com">Scrapinghub</a></li>
+      <li><a href="https://blog.scrapinghub.com">Scrapinghub Blog</a></li>
+      <li id="end"><a href="http://quotes.toscrape.com">Quotes To Scrape</a>end</li>
+      <li data-xxxx="end" abc="abc"><a href="http://quotes.toscrape.com">Quotes To Scrape</a>end</li>
+    </ul>
+  </body>
+</html>
+"""
+s3 = getxpath(sample3)
