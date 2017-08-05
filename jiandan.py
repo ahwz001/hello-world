@@ -6,7 +6,9 @@ import time
 import urllib.request
 import random
 
+
 num = 0
+
 
 def getxpath(url):
     r = requests.get(url).content
@@ -28,20 +30,21 @@ def get_img(s):
         urllib.request.urlretrieve(j, name)
         num += 1
         print(num)
-        time.sleep(random.randint(0,5))
+        # time.sleep(random.randint(0,5))
 
 
 def main():
-    url_0 = 'http://jandan.net/ooxx/page-'
+    url_0 = 'http://jandan.net/ooxx/page-***#comments'
+    url_list = [url_0.replace('***',str(i)) for i in range(220,232)]
 
-    url_list  = [url_0 + str(i) for i in range(1980,2008)]
     print(url_list)
     page = 0    
     for k in url_list:
         t = getxpath(k)
         get_img(t)
-        print(page )
+        print(page)
         page += 1
+
 
 if __name__ == "__main__":
     main()
